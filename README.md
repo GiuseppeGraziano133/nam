@@ -8,7 +8,7 @@ NVM is required to use NAM.
 
 # Installation
 
-Run ```npm install -g nam```<br>
+Run ```npm install -g node-alias-manager```<br>
 Add ```NAM_HOME``` to the user environment variables and set the value to the directory in the npm modules
 
 e.g.
