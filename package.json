@@ -1,5 +1,5 @@
 {
-  "name": "nam",
+  "name": "node-alias-manager",
   "version": "1.0.0",
   "description": "Node Alias Manager",
   "main": "index.js",
