@@ -1,1 +1,1 @@
-@node "%APPDATA%\nam\index.js" %*
+@node "%NAM_HOME%" %*
