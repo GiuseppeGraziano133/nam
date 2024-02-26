@@ -12,7 +12,7 @@ Run ```npm install -g node-alias-manager```<br>
 Add ```NAM_HOME``` to the user environment variables and set the value to the directory in the npm modules
 
 e.g.
-C:\Users\yn\AppData\Roaming\npm\node_modules\npm\node_modules\nam
+C:\Users\yn\AppData\Roaming\npm\node_modules\node-alias-manager
 
 Add ```%NAM_HOME%``` to the ```Path``` variable<br>
 Add ```NAM_HOME``` to the system environment variables and set the value to the directory in the npm modules<br>
