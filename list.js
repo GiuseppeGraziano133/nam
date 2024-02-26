@@ -12,8 +12,8 @@ function listAlias(versionsFilePath) {
     if (Object.keys(versions).length === 0) {
         console.log("No Node version found.");
     } else {
-        const longestAlias = Math.max(...Object.entries(versions).map(v => v[1].alias).map(a => a.length)) + 4;
-        const longestVersion = Math.max(...Object.entries(versions).map(v => v[1].version).map(v => v.length)) + 2;
+        const longestAlias = Math.max(...Object.entries(versions).map(v => v[1].alias).map(a => a?.length)) + 4;
+        const longestVersion = Math.max(...Object.entries(versions).map(v => v[1].version).map(v => v?.length)) + 2;
 
         console.log("");
         for (const [key, value] of Object.entries(versions)) {
