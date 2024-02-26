@@ -19,13 +19,13 @@ function listAlias(versionsFilePath) {
         for (const [key, value] of Object.entries(versions)) {
             let line = value.alias;
 
-            for (let i = 0; i < longestAlias - value.alias.length; i++) {
+            for (let i = 0; i < longestAlias - value.alias?.length; i++) {
                 line += ' ';
             }
 
             line += value.version;
 
-            for (let i = 0; i < longestVersion - value.alias.length; i++) {
+            for (let i = 0; i < longestVersion - value.version?.length; i++) {
                 line += ' ';
             }
 

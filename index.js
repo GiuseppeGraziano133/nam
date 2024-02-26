@@ -23,7 +23,7 @@ yargs
             type: 'string'
         })
     }, (argv) => {
-        add(argv.vers, argv.name, versionsFilePath);
+        add(argv.vers, argv.alias, versionsFilePath);
     })
     .command('remove <alias>', 'Remove an alias for a Node version', (yargs) => {
         yargs.positional('alias', {
@@ -31,7 +31,7 @@ yargs
             type: 'string'
         })
     }, (argv) => {
-        remove(argv.name, versionsFilePath);
+        remove(argv.alias, versionsFilePath);
     })
     .command('use <alias>', 'Select a version using its alias and use it', (yargs) => {
         yargs.positional('alias', {
@@ -39,7 +39,7 @@ yargs
             type: 'string'
         })
     }, (argv) => {
-        use(argv.name, versionsFilePath);
+        use(argv.alias, versionsFilePath);
     })
     .command('list', 'List all the availables versions', {}, () => {
         list(versionsFilePath);

@@ -4,6 +4,9 @@
   "description": "Node Alias Manager",
   "main": "index.js",
   "scripts": {
+    "add": "node index.js add",
+    "remove": "node index.js remove",
+    "use": "node index.js use",
     "list": "node index.js list"
   },
   "repository": {

@@ -1,6 +1,8 @@
 const fs = require('fs');
 
 function addAlias(version, alias, filePath) {
+    console.log('v', version)
+    console.log('a', alias)
     fs.readFile(filePath, (err, data) => {
         if (err) throw err;
 
