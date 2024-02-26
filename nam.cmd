@@ -1,0 +1,1 @@
+@node "%APPDATA%\nam\index.js" %*

@@ -1,0 +1,29 @@
+{
+  "name": "nam",
+  "version": "1.0.0",
+  "description": "Node Alias Manager",
+  "main": "index.js",
+  "scripts": {
+    "list": "node index.js list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiuseppeGraziano133/nam.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "nvm",
+    "alias",
+    "manager"
+  ],
+  "author": "Giuseppe Graziano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiuseppeGraziano133/nam/issues"
+  },
+  "homepage": "https://github.com/GiuseppeGraziano133/nam#readme",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
