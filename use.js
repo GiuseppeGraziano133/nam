@@ -30,10 +30,15 @@ function useAlias(alias, filePath) {
                 console.error(`NAM error: ${error}`);
                 return;
             }
-            console.log(alias, 'selected', `(v${json.find(a => a.alias === alias).version})`);
+            if (stdout) {
+                console.log(stdout);
+                return;
+            }
             if (stderr) {
                 console.log(`External error: ${stderr}`);
+                return;
             }
+            // console.log(alias, 'selected', `(v${json.find(a => a.alias === alias).version})`);
         });
     });
 }

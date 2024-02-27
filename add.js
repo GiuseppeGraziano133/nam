@@ -1,27 +1,42 @@
 const fs = require('fs');
 
 function addAlias(version, alias, filePath) {
-    fs.readFile(filePath, (err, data) => {
-        if (err) throw err;
+    if (!fs.existsSync(filePath)) {
+            let json = [];
 
-        let json = JSON.parse(data);
+            json.push({
+                version,
+                alias,
+                current: false
+            });
 
-        if (!!json.find(a => a.alias === alias)) {
-            console.log('Alias already exists');
-            return;
-        }
-
-        json.push({
-            version,
-            alias,
-            current: false
-        });
-
-        fs.writeFile(filePath, JSON.stringify(json, null, 2), (err) => {
+            fs.writeFile(filePath, JSON.stringify(json, null, 2), (err) => {
+                if (err) throw err;
+                console.log(version, 'added as', alias);
+            });
+    } else {
+        fs.readFile(filePath, (err, data) => {
             if (err) throw err;
-            console.log(version, 'added as', alias);
+
+            let json = JSON.parse(data);
+
+            if (!!json.find(a => a.alias === alias)) {
+                console.log('Alias already exists');
+                return;
+            }
+
+            json.push({
+                version,
+                alias,
+                current: false
+            });
+
+            fs.writeFile(filePath, JSON.stringify(json, null, 2), (err) => {
+                if (err) throw err;
+                console.log(version, 'added as', alias);
+            });
         });
-    });
+    }
 }
 
 module.exports = addAlias;
