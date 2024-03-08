@@ -9,7 +9,13 @@ const remove = require('./remove');
 const use = require('./use');
 const list = require('./list');
 
-const versionsFilePath = path.join(__dirname, 'versions.json');
+const versionsFilePath = getPath();
+
+function getPath() {
+    let filePath = path.join(__dirname, 'versions.json').split('\\');
+    filePath.splice(filePath.length - 2, 1);
+    return filePath.join('\\');
+}
 
 yargs
     .scriptName("nam")
